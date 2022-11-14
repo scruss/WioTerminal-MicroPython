@@ -7,7 +7,7 @@ from time import sleep_ms
 from machine import ADC
 
 # PD15-22C/TR8 photodiode
-light_sensor = machine.ADC("PD01")
+light_sensor = ADC("PD01")
 
 while True:
     print([light_sensor.read_u16()])
