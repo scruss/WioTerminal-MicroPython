@@ -35,7 +35,7 @@ backlight = Pin("LED_LCD", Pin.OUT)  # backlight is not a PWM pin
 spi = SPI(
     7, sck=Pin("LCD_SCK"), mosi=Pin("LCD_MOSI"), miso=Pin("LCD_MISO"), baudrate=4000000
 )
-display = Display(spi, dc=Pin("LCD_D/C"), cs=Pin("LCD_CS"), rst=Pin("LCD_RESET"))
+display = Display(spi, dc=Pin("LCD_D_C"), cs=Pin("LCD_CS"), rst=Pin("LCD_RESET"))
 display.display_on()
 display.clear()
 led.on()  # shotgun debugging, embedded style
